@@ -26,12 +26,12 @@ public bool grounded = true;
             jumpCount = 1;
         }
 
-        if(Input.GetKey(KeyCode.Space)) {
+        if(Input.GetKey(KeyCode.UpArrow)) {
             if (IsGrounded()) {
                 rb2d.velocity = Vector2.up * jumpPower * 2;
 
             } else {
-                if(Input.GetKeyDown(KeyCode.Space)) {
+                if(Input.GetKeyDown(KeyCode.UpArrow)) {
                     if (jumpCount < jumpCountMax) {
                         rb2d.velocity = Vector2.up * jumpPower * 2;
                         jumpCount++;
